@@ -1,3 +1,22 @@
+# SatchelJS Cookbook
+
+This cookbook is a set of examples that demonstrate how to use SatchelJS under various scenarios.
+
+# Running the examples:
+
+```
+git clone https://github.com/microsoft/satcheljs-cookbook
+npm i
+npm start
+```
+
+Browser [http://localhost:8080]() and click on an example.
+
+# Running tests:
+
+```
+npm test
+```
 
 # Contributing
 
