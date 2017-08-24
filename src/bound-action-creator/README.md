@@ -1,4 +1,4 @@
-# Accessing Data from Component
+# Bound Action Creator
 
 [https://github.com/Microsoft/satcheljs-cookbook/tree/master/src/bound-action-creator]()
 
