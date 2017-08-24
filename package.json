@@ -22,10 +22,10 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "office-ui-fabric-react": "4.35.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "satcheljs": "^3.0.0-beta5",
-    "office-ui-fabric-react": "4.35.2"
+    "satcheljs": "^3.0.0-beta5"
   },
   "jest": {
     "transform": {

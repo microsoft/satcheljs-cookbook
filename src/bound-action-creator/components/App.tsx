@@ -7,6 +7,6 @@ import {Fabric} from 'office-ui-fabric-react/lib/components/Fabric';
 import toggleButton from '../actions/toggleButton';
 
 export default observer(() => (
-<div>
+<Fabric>
     <Button onClick={toggleButton}>Flag is {getStore().flag ? 'on' : 'off'}</Button>
-</div>));
+</Fabric>));
