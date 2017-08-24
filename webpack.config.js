@@ -1,11 +1,17 @@
 const fs = require('fs');
 const path = require('path');
-const entries = fs.readdirSync('src');
+const entryIndices = fs.readdirSync('src');
+
+let entries = {};
+
+entryIndices.forEach(entry => entries[path.basename(entry)] = `./src/${entry}`);
 
 module.exports = {
-    entry: entries.map(entry => `src/${entry}/index`),
+    entry: entries,
+    devtool: 'eval',
     output: {
         path: path.resolve(__dirname, 'build'),
+        publicPath: "/scripts/",
         filename: '[name].js',
     },
     module: {
@@ -19,5 +25,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+
     },
 };
