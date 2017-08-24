@@ -10,11 +10,11 @@ export default observer(() => (
     <List
         items={ getStore().items }
         onRenderCell={ (item, index) => (
-        <div>
+        <div style={{ padding: 5 }}>
             <strong>{ `Animal ${index}` }</strong>
             <div>{ item.name }</div>
             <div>{ item.description }</div>
-       </div>
+        </div>
         ) }
     />
 </Fabric>));
