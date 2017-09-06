@@ -8,5 +8,5 @@ import toggleButton from '../actions/toggleButton';
 
 export default observer(() => (
 <Fabric>
-    <Button onClick={() => dispatch(toggleButton)}>Flag is {getStore().flag ? 'on' : 'off'}</Button>
+    <Button onClick={() => dispatch(toggleButton())}>Flag is {getStore().flag ? 'on' : 'off'}</Button>
 </Fabric>));
