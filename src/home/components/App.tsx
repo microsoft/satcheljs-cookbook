@@ -8,6 +8,7 @@ const links: {[topic: string]: {[url: string]: string}} = {
         'store-data-inside-component': 'Using store data inside a component',
     },
     'Coordination': {
+        'update-shared-state': 'Update Shared State Displayed in Different Component Subtrees',
         'independent-state-change': 'Independent State Changes in Multiple Stores',
         'related-state-change': 'Related State Changes in Multiple Stores',
     },

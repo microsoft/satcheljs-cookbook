@@ -34,7 +34,7 @@
     "pug": "^2.0.0-rc.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "satcheljs": "^3.0.0-beta5"
+    "satcheljs": "3.0.0-beta7"
   },
   "jest": {
     "transform": {
