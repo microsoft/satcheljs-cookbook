@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Fabric} from 'office-ui-fabric-react/lib/components/Fabric';
 
 const links: {[topic: string]: {[url: string]: string}} = {
     'Basics': {
@@ -25,7 +24,7 @@ const links: {[topic: string]: {[url: string]: string}} = {
 };
 
 export default () => (
-<Fabric>
+<div>
     <ul>
     {Object.keys(links).map(topic => {
         return <li>
@@ -39,5 +38,5 @@ export default () => (
         </li>;
     })}
     </ul>
-</Fabric>
+</div>
 );

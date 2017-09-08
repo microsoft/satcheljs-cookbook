@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {observer} from 'mobx-react';
 import getStore from '../store/store';
-import {List} from 'office-ui-fabric-react/lib/components/List';
 
 export default observer(() => (
     <ul>

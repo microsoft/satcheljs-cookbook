@@ -1,7 +1,7 @@
-import {mutator, boundActionCreator} from 'satcheljs';
+import {mutator, action} from 'satcheljs';
 import getStore from '../store/store';
 
-let toggleButton = boundActionCreator('toggleButton');
+let toggleButton = action('toggleButton');
 
 mutator(toggleButton, () => {
     getStore().flag = !getStore().flag;
