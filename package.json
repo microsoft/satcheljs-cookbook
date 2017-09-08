@@ -18,7 +18,7 @@
     "@types/react-dom": "^15.5.4",
     "@types/webpack-dev-middleware": "^1.9.3",
     "enzyme": "2.9.1",
-    "jest": "^20.0.4",
+    "jest": "^21.0.2",
     "opn": "^5.1.0",
     "react-test-renderer": "^15.6.1",
     "ts-jest": "^20.0.10",
