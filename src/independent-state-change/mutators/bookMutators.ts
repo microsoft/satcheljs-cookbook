@@ -10,11 +10,12 @@ mutator(selectBook, (msg) => {
 mutator(selectCategory, (msg) => {
     const store = getStore();
 
-    let found: number | null = null;
+    let found: string | null = null;
 
-    store.books.forEach(book => {
+    Object.keys(store.books).forEach(bookId => {
+        const book = store.books[bookId];
         if (book.categoryId == msg.id && !found) {
-            found = book.id;
+            found = bookId;
         }
     });
 
