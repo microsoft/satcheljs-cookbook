@@ -1,5 +1,9 @@
 import * as React from 'react';
+import {observer} from 'mobx-react';
 
-export default class CategoryList extends React.Component<any, any> {
-
+@observer
+export default class Description extends React.Component<any, any> {
+    render() {
+        return <div />;
+    }
 }

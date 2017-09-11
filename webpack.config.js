@@ -4,7 +4,12 @@ const entryIndices = fs.readdirSync('src');
 
 let entries = {};
 
-entryIndices.forEach(entry => entries[path.basename(entry)] = `./src/${entry}`);
+entryIndices.forEach(entry => {
+    const name = path.basename(entry);
+    if (name != 'common') {
+        entries[name] = `./src/${entry}`;
+    }
+});
 
 module.exports = {
     entry: entries,
@@ -21,6 +26,10 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
         ],
     },
     resolve: {

@@ -17,10 +17,12 @@
     "@types/react": "^16.0.4",
     "@types/react-dom": "^15.5.4",
     "@types/webpack-dev-middleware": "^1.9.3",
+    "css-loader": "^0.28.7",
     "enzyme": "2.9.1",
     "jest": "^21.0.2",
     "opn": "^5.1.0",
     "react-test-renderer": "^15.6.1",
+    "style-loader": "^0.18.2",
     "ts-jest": "^20.0.10",
     "ts-loader": "^2.3.3",
     "typescript": "^2.4.2",
@@ -29,6 +31,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.3",
+    "classnames": "^2.2.5",
     "express": "^4.15.4",
     "pug": "^2.0.0-rc.4",
     "react": "^15.6.1",
