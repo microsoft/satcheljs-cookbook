@@ -27,6 +27,7 @@ export interface Cart {
         quantity: number;
     }[];
     selectedBookId: string | null;
+    isBuying: boolean;
 }
 
 export const sampleData: BookStore = {
@@ -75,7 +76,8 @@ export const sampleData: BookStore = {
     selectedBookId: '1',
     cart: {
         books: [],
-        selectedBookId: null
+        selectedBookId: null,
+        isBuying: false
     }
 }
 

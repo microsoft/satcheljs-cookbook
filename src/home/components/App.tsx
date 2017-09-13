@@ -11,10 +11,6 @@ const links: {[topic: string]: {[url: string]: string}} = {
         'independent-state-change': 'Independent State Changes in Multiple Stores',
         'related-state-change': 'Related State Changes in Multiple Stores',
     },
-    'Data Structure': {
-        'normalized-state': 'Normalized State',
-        'embedded-state': 'Embedded State',
-    },
     'Side Effects': {
         'persist-update': 'Persisting an Update to a Server'
     },
