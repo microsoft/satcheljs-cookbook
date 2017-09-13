@@ -2,17 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const entryIndices = fs.readdirSync('src');
 
-let entries = {};
-
-entryIndices.forEach(entry => {
-    const name = path.basename(entry);
-    if (name != 'common') {
-        entries[name] = `./src/${entry}`;
-    }
-});
-
 module.exports = {
-    entry: entries,
+    entry: {
+        'bookstore': './src/index'
+    },
     devtool: 'eval',
     output: {
         path: path.resolve(__dirname, 'build'),
