@@ -24,7 +24,9 @@ export default class Cart extends React.Component<any, any> {
                 );
             })}
 
-            <button onClick={() => buy()} disabled={store.cart.isBuying}>{store.cart.isBuying ? 'Buying...' : 'Buy!'}</button>
+            {store.cart.books.length > 0 && (
+                <button onClick={() => buy()} disabled={store.cart.isBuying}>{store.cart.isBuying ? 'Buying...' : 'Buy!'}</button>
+            )}
         </div>;
     }
 }

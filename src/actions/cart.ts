@@ -4,4 +4,5 @@ export let removeBookFromCart = action('removeBookFromCart', (bookId: string) =>
 export let _removeBookFromCart = action('_removeBookFromCart', (bookId: string) => ({bookId}));
 export let selectBookInCart = action('selectBookInCart', (bookId: string | null) => ({bookId}));
 export let buy = action('buy');
-export let setBuying = action('setBuying', (buying: boolean) => ({buying}));
+export let beginBuying = action('beginBuying');
+export let finishBuying = action('finishBuying');

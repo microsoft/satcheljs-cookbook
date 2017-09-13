@@ -1,7 +1,7 @@
 import {mutator, action} from 'satcheljs';
 import selectCategory from '../actions/selectCategory';
 import selectBook from '../actions/selectBook';
-import {selectBookInCart} from '../actions/cart';
+import {selectBookInCart, finishBuying} from '../actions/cart';
 import getStore from '../store/store';
 
 mutator(selectBookInCart, () => {
@@ -12,17 +12,25 @@ mutator(selectBook, (msg) => {
     getStore().selectedBookId = msg.id;
 });
 
-mutator(selectCategory, (msg) => {
+function findFirstBookId(bookId: string) {
     const store = getStore();
 
     let found: string | null = null;
 
     Object.keys(store.books).forEach(bookId => {
         const book = store.books[bookId];
-        if (book.categoryId == msg.id && !found) {
+        if (book.categoryId == bookId && !found) {
             found = bookId;
         }
     });
 
-    store.selectedBookId = found;
+    return found;
+}
+
+mutator(selectCategory, (msg) => {
+    getStore().selectedBookId = findFirstBookId(msg.id);
+});
+
+mutator(finishBuying, () => {
+    getStore().selectedBookId = findFirstBookId(getStore().selectedCategoryId);
 });

@@ -1,6 +1,6 @@
 import {mutator} from 'satcheljs';
 import getStore from '../../store/store';
-import {addBookToCart, _removeBookFromCart} from '../../actions/cart';
+import {addBookToCart, _removeBookFromCart, finishBuying} from '../../actions/cart';
 
 function findBookInCart(bookId: string) {
     const store = getStore();
@@ -36,4 +36,9 @@ mutator(_removeBookFromCart, (msg) => {
     if (foundIndex !== null) {
         store.cart.books.splice(foundIndex, 1);
     }
+});
+
+mutator(finishBuying, () => {
+    const store = getStore();
+    store.cart.books = [];
 });

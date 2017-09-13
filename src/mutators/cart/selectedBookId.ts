@@ -1,5 +1,5 @@
 import {mutator, action} from 'satcheljs';
-import {selectBookInCart} from '../../actions/cart';
+import {selectBookInCart, finishBuying} from '../../actions/cart';
 import selectBook from '../../actions/selectBook';
 import getStore from '../../store/store';
 
@@ -8,5 +8,9 @@ mutator(selectBookInCart, (msg) => {
 });
 
 mutator(selectBook, (msg) => {
+    getStore().cart.selectedBookId = null;
+});
+
+mutator(finishBuying, () => {
     getStore().cart.selectedBookId = null;
 });

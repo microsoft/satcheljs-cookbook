@@ -17,3 +17,6 @@ A few conventions that we've adopted here that is recommended:
 2. many action creators that are related CAN be placed in one file
 3. mixing and matching independent and related state change patterns is okay as long as they are aggregated inside an orchestrator
 4. an action that is not expected to be called by outside the orchestrator are prefixed with a "_" to let other developers know not to call these from anywhere else
+
+An example of an orchestrator that does dispatches out to multiple actions in order is [removeBookFromCart.ts](../src/orchestrators/removeBookFromCart.ts):
+
