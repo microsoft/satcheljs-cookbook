@@ -14,12 +14,13 @@ export default class BookList extends React.Component<any, any> {
         const bookIds = Object.keys(store.books).filter(bookId => store.books[bookId].categoryId == categoryId);
         const selectedBookId = getStore().selectedBookId;
 
-        return (<div>
+        return (<div className={cx('books')}>
+            <h2>Books</h2>
             {bookIds.map(bookId => (
                 <div
                     onClick={() => selectBook(bookId)}
                     key={bookId}
-                    className={cx({selected: selectedBookId == bookId})}>
+                    className={cx({selected: selectedBookId == bookId}, 'selectable')}>
                     {store.books[bookId].name}
                 </div>
             ))}

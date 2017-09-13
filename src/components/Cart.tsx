@@ -10,12 +10,12 @@ const cx = classnames.bind(require('./AppStyles.css'));
 export default class Cart extends React.Component<any, any> {
     render() {
         const store = getStore();
-        return <div>
+        return <div className={cx('cart')}>
             {store.cart.books.map(item => {
                 const book = store.books[item.bookId];
                 return (
                     <div key={item.bookId} className={cx({selected: store.cart.selectedBookId == item.bookId})}>
-                        <strong onClick={() => selectBookInCart(item.bookId)}>{book.name}</strong>
+                        <strong className={cx('selectable')} onClick={() => selectBookInCart(item.bookId)}>{book.name}</strong>
                         ({item.quantity}) -
                         <button onClick={(e) => {
                             removeBookFromCart(item.bookId);

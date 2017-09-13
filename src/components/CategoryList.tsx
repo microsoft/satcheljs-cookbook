@@ -11,7 +11,8 @@ export default class CategoryList extends React.Component<any, any> {
     render() {
         const store = getStore();
         const selectedCategoryId = getStore().selectedCategoryId;
-        return (<div>
+        return (<div className={cx('category')}>
+            <h2>Categories</h2>
             {Object.keys(store.categories).map(categoryId => {
                 const category = store.categories[categoryId];
                 return (
