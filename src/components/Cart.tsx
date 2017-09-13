@@ -14,8 +14,8 @@ export default class Cart extends React.Component<any, any> {
             {store.cart.books.map(item => {
                 const book = store.books[item.bookId];
                 return (
-                    <div key={item.bookId} className={cx({selected: store.cart.selectedBookId == item.bookId})}>
-                        <strong className={cx('selectable')} onClick={() => selectBookInCart(item.bookId)}>{book.name}</strong>
+                    <div key={item.bookId} className={cx({selected: store.cart.selectedBookId == item.bookId}, 'selectable')}>
+                        <strong onClick={() => selectBookInCart(item.bookId)}>{book.name}</strong>
                         ({item.quantity}) -
                         <button onClick={(e) => {
                             removeBookFromCart(item.bookId);

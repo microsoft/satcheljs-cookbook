@@ -19,7 +19,7 @@ export default class CategoryList extends React.Component<any, any> {
                     <div
                         onClick={() => {selectCategory(categoryId);}}
                         key={categoryId}
-                        className={cx({selected: selectedCategoryId == categoryId})}>
+                        className={cx({selected: selectedCategoryId == categoryId}, 'selectable')}>
                         {category.name}
                     </div>
                 );

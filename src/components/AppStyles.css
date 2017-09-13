@@ -16,6 +16,7 @@ html, body {
 
 .selectable {
     cursor: pointer;
+    padding: .5rem;
 }
 
 .books {
@@ -32,6 +33,3 @@ html, body {
     width: auto;
 }
 
-.cart {
-
-}
