@@ -12,14 +12,14 @@ mutator(selectBook, (msg) => {
     getStore().selectedBookId = msg.id;
 });
 
-function findFirstBookId(bookId: string) {
+function findFirstBookId(categoryId: string) {
     const store = getStore();
 
     let found: string | null = null;
 
     Object.keys(store.books).forEach(bookId => {
         const book = store.books[bookId];
-        if (book.categoryId == bookId && !found) {
+        if (book.categoryId == categoryId && !found) {
             found = bookId;
         }
     });

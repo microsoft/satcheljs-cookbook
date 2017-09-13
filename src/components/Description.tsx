@@ -15,6 +15,7 @@ export default class Description extends React.Component<any, any> {
         const book = selectedBookId !== null && store.books[selectedBookId];
 
         return (<div className={cx('description')}>
+            {book && <h2>{book.name}</h2>}
             {book ? book.description : 'Select a book to see description'}
             {selectedBookId && (
                 <div>
