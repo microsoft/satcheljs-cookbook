@@ -3,6 +3,7 @@ import {observer} from 'mobx-react';
 import {dispatch} from 'satcheljs';
 import getStore from '../store/store';
 import BookList from './BookList';
+import Cart from './Cart';
 import CategoryList from './CategoryList';
 import Description from './Description';
 

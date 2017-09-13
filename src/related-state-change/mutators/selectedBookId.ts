@@ -1,7 +1,12 @@
 import {mutator, action} from 'satcheljs';
 import selectCategory from '../actions/selectCategory';
 import selectBook from '../actions/selectBook';
+import {selectBookInCart} from '../actions/cart';
 import getStore from '../store/store';
+
+mutator(selectBookInCart, () => {
+    getStore().selectedBookId = null;
+});
 
 mutator(selectBook, (msg) => {
     getStore().selectedBookId = msg.id;
