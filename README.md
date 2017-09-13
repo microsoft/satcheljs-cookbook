@@ -4,7 +4,7 @@ This cookbook centers around a single example of a book shop. There are several 
 
 # Recipes
 
-1. [Simple state cChanges](./recipes/01-simple-state-changes.md)
+1. [Simple state changes](./recipes/01-simple-state-changes.md)
 2. [Access store data from inside components](./recipes/02-store-data-inside-component.md)
 3. [Update shared state from different parts of the UI](./recipes/03-update-shared-state.md)
 4. [Independent state changes from one single action](./recipes/04-independent-state-change.md)
