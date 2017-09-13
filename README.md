@@ -2,6 +2,11 @@
 
 This cookbook is a set of examples that demonstrate how to use SatchelJS under various scenarios.
 
+# Recipes:
+
+* Basic API Usage
+    1. [Simple State Changes](./recipes/01-simple-state-changes.md)
+
 # Running the examples:
 
 ```
