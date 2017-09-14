@@ -19,7 +19,7 @@ npm i
 npm start
 ```
 
-Browser [http://localhost:8080]() and click on an example.
+Browser [http://localhost:3000]() and click on an example.
 
 # Running tests
 
