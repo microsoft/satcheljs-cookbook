@@ -4433,9 +4433,9 @@ sane@^2.0.0:
   optionalDependencies:
     fsevents "^1.1.1"
 
-satcheljs@3.0.0-beta7:
-  version "3.0.0-beta7"
-  resolved "https://registry.yarnpkg.com/satcheljs/-/satcheljs-3.0.0-beta7.tgz#d95791ca0c0b42590a96eb3cc4db553bccbe256a"
+satcheljs@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/satcheljs/-/satcheljs-3.0.1.tgz#20e6a767dad7ad1d0c502b7ca454a3940c1317e1"
   dependencies:
     mobx "~2.6.5"
     mobx-react "~4.0.3"
