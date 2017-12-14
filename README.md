@@ -15,7 +15,7 @@ This cookbook centers around a single example of a book shop. There are several 
 
 ```
 git clone https://github.com/microsoft/satcheljs-cookbook
-npm i
+yarn
 npm start
 ```
 
