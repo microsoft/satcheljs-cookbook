@@ -1,5 +1,5 @@
-import {createStore} from 'satcheljs';
-import {BookStore, sampleData} from './BookStore';
+import { createStore } from 'satcheljs';
+import { BookStore, sampleData } from './BookStore';
 
 // Subscribe to mutators
 import '../mutators/selectedBookId';

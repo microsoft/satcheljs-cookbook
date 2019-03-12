@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {observer} from 'mobx-react';
-import {dispatch} from 'satcheljs';
+import { observer } from 'mobx-react';
+import { dispatch } from 'satcheljs';
 import getStore from '../store/store';
 import BookList from './BookList';
 import Cart from './Cart';
@@ -12,9 +12,9 @@ require('./AppStyles.css');
 export default observer(() => {
     return (
         <div>
-            <div style={{display: 'flex'}}>
+            <div style={{ display: 'flex' }}>
                 <div>
-                    <div style={{display: 'flex'}}>
+                    <div style={{ display: 'flex' }}>
                         <CategoryList />
                         <BookList />
                     </div>
@@ -25,5 +25,6 @@ export default observer(() => {
                 </div>
                 <Description />
             </div>
-        </div>);
+        </div>
+    );
 });

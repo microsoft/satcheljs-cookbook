@@ -1,7 +1,7 @@
-import {mutator} from 'satcheljs';
+import { mutator } from 'satcheljs';
 import * as store from '../../../store/store';
-import {BookStore} from '../../../store/BookStore';
-import {addBookToCart, _removeBookFromCart, finishBuying} from '../../../actions/cart';
+import { BookStore } from '../../../store/BookStore';
+import { addBookToCart, _removeBookFromCart, finishBuying } from '../../../actions/cart';
 
 import '../../../mutators/cart/books';
 
@@ -11,12 +11,12 @@ describe('cart.books mutators', () => {
         const state: any = {
             books: {
                 '1': {
-                    name: 'hi'
-                }
+                    name: 'hi',
+                },
             },
             cart: {
-                books: []
-            }
+                books: [],
+            },
         };
 
         spyOn(store, 'default').and.returnValue(state);
@@ -34,15 +34,17 @@ describe('cart.books mutators', () => {
         const state: any = {
             books: {
                 '1': {
-                    name: 'hi'
-                }
+                    name: 'hi',
+                },
             },
             cart: {
-                books: [{
-                    bookId: '1',
-                    quantity: 1
-                }]
-            }
+                books: [
+                    {
+                        bookId: '1',
+                        quantity: 1,
+                    },
+                ],
+            },
         };
 
         spyOn(store, 'default').and.returnValue(state);
@@ -61,15 +63,17 @@ describe('cart.books mutators', () => {
         const state: any = {
             books: {
                 '1': {
-                    name: 'hi'
-                }
+                    name: 'hi',
+                },
             },
             cart: {
-                books: [{
-                    bookId: '1',
-                    quantity: 10
-                }]
-            }
+                books: [
+                    {
+                        bookId: '1',
+                        quantity: 10,
+                    },
+                ],
+            },
         };
 
         spyOn(store, 'default').and.returnValue(state);
@@ -86,15 +90,17 @@ describe('cart.books mutators', () => {
         const state: any = {
             books: {
                 '1': {
-                    name: 'hi'
-                }
+                    name: 'hi',
+                },
             },
             cart: {
-                books: [{
-                    bookId: '1',
-                    quantity: 10
-                }]
-            }
+                books: [
+                    {
+                        bookId: '1',
+                        quantity: 10,
+                    },
+                ],
+            },
         };
 
         spyOn(store, 'default').and.returnValue(state);
@@ -111,15 +117,17 @@ describe('cart.books mutators', () => {
         const state: any = {
             books: {
                 '1': {
-                    name: 'hi'
-                }
+                    name: 'hi',
+                },
             },
             cart: {
-                books: [{
-                    bookId: '1',
-                    quantity: 10
-                }]
-            }
+                books: [
+                    {
+                        bookId: '1',
+                        quantity: 10,
+                    },
+                ],
+            },
         };
 
         spyOn(store, 'default').and.returnValue(state);

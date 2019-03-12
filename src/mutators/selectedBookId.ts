@@ -1,14 +1,14 @@
-import {mutator, action} from 'satcheljs';
+import { mutator, action } from 'satcheljs';
 import selectCategory from '../actions/selectCategory';
 import selectBook from '../actions/selectBook';
-import {selectBookInCart, finishBuying} from '../actions/cart';
+import { selectBookInCart, finishBuying } from '../actions/cart';
 import getStore from '../store/store';
 
 mutator(selectBookInCart, () => {
     getStore().selectedBookId = null;
 });
 
-mutator(selectBook, (msg) => {
+mutator(selectBook, msg => {
     getStore().selectedBookId = msg.id;
 });
 
@@ -27,7 +27,7 @@ function findFirstBookId(categoryId: string) {
     return found;
 }
 
-mutator(selectCategory, (msg) => {
+mutator(selectCategory, msg => {
     getStore().selectedBookId = findFirstBookId(msg.id);
 });
 
