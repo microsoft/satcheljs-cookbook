@@ -1,8 +1,8 @@
 # SatchelJS Cookbook
 
-This cookbook centers around a single example of a book shop. There are several recipes in the form of Markdown files under the "recipes" directory that points to various parts of the example inside the discussion section.
+This cookbook centers around a single example of a book shop. There are several recipes in the form of Markdown files under the "recipes" directory that point to various parts of the example inside the discussion section.
 
-# Recipes
+## Recipes
 
 1. [Simple state changes](./recipes/01-simple-state-changes.md)
 2. [Access store data from inside components](./recipes/02-store-data-inside-component.md)
@@ -11,23 +11,23 @@ This cookbook centers around a single example of a book shop. There are several 
 5. [Coordinating related state changes from one single action](./recipes/05-related-state-change.md)
 6. [Persist updates on server with network calls](./recipes/06-persist-update-on-server.md)
 
-# Running the examples
+## Running the examples
 
 ```
 git clone https://github.com/microsoft/satcheljs-cookbook
-npm i
-npm start
+yarn
+yarn start
 ```
 
-Browser [http://localhost:3000]() and click on an example.
+Open your browser to [http://localhost:3000](http://localhost:3000) and click on an example.
 
-# Running tests
+## Running tests
 
 ```
-npm test
+yarn test
 ```
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
