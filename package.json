@@ -39,7 +39,7 @@
     "style-loader": "^0.18.2",
     "ts-jest": "^20.0.10",
     "ts-loader": "^2.3.3",
-    "typescript": "^2.4.2",
+    "typescript": "^3.3.3333",
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^3.2.1"
