@@ -7,23 +7,20 @@ import * as classnames from 'classnames/bind';
 
 const cx = classnames.bind(require('./AppStyles.css'));
 
-@observer
-export default class Description extends React.Component<any, any> {
-    render() {
-        const store = getStore();
-        const selectedBookId = getSelectedBookId();
-        const book = selectedBookId !== null && store.books[selectedBookId];
+export default observer(function Description() {
+    const store = getStore();
+    const selectedBookId = getSelectedBookId();
+    const book = selectedBookId !== null && store.books[selectedBookId];
 
-        return (
-            <div className={cx('description')}>
-                {book && <h2>{book.name}</h2>}
-                {book ? book.description : 'Select a book to see description'}
-                {selectedBookId && (
-                    <div>
-                        <button onClick={() => addBookToCart(selectedBookId!)}>Add to Cart</button>
-                    </div>
-                )}
-            </div>
-        );
-    }
-}
+    return (
+        <div className={cx('description')}>
+            {book && <h2>{book.name}</h2>}
+            {book ? book.description : 'Select a book to see description'}
+            {selectedBookId && (
+                <div>
+                    <button onClick={() => addBookToCart(selectedBookId!)}>Add to Cart</button>
+                </div>
+            )}
+        </div>
+    );
+});

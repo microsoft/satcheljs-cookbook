@@ -6,28 +6,25 @@ import * as classnames from 'classnames/bind';
 
 const cx = classnames.bind(require('./AppStyles.css'));
 
-@observer
-export default class BookList extends React.Component<any, any> {
-    render() {
-        const store = getStore();
-        const categoryId = store.selectedCategoryId;
-        const bookIds = Object.keys(store.books).filter(
-            bookId => store.books[bookId].categoryId == categoryId
-        );
-        const selectedBookId = getStore().selectedBookId;
+export default observer(function BookList() {
+    const store = getStore();
+    const categoryId = store.selectedCategoryId;
+    const bookIds = Object.keys(store.books).filter(
+        bookId => store.books[bookId].categoryId == categoryId
+    );
+    const selectedBookId = getStore().selectedBookId;
 
-        return (
-            <div className={cx('books')}>
-                <h2>Books</h2>
-                {bookIds.map(bookId => (
-                    <div
-                        onClick={() => selectBook(bookId)}
-                        key={bookId}
-                        className={cx({ selected: selectedBookId == bookId }, 'selectable')}>
-                        {store.books[bookId].name}
-                    </div>
-                ))}
-            </div>
-        );
-    }
-}
+    return (
+        <div className={cx('books')}>
+            <h2>Books</h2>
+            {bookIds.map(bookId => (
+                <div
+                    onClick={() => selectBook(bookId)}
+                    key={bookId}
+                    className={cx({ selected: selectedBookId == bookId }, 'selectable')}>
+                    {store.books[bookId].name}
+                </div>
+            ))}
+        </div>
+    );
+});
