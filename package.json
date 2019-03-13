@@ -55,7 +55,7 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest"
     },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
