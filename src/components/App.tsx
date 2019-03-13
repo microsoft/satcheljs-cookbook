@@ -6,6 +6,7 @@ import BookList from './BookList';
 import Cart from './Cart';
 import CategoryList from './CategoryList';
 import Description from './Description';
+import Counter from './Counter';
 
 require('./AppStyles.css');
 
@@ -22,6 +23,7 @@ export default observer(() => {
                         <h2>Shopping Cart</h2>
                         <Cart />
                     </div>
+                    <Counter />
                 </div>
                 <Description />
             </div>

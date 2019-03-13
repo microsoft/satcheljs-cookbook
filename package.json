@@ -45,6 +45,7 @@
     "classnames": "^2.2.5",
     "mobx": "~4.5.0",
     "mobx-react": "~5.2.8",
+    "mobx-react-lite": "^1.1.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "satcheljs": "4.0.0-beta2"
