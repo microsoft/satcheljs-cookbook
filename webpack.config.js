@@ -3,13 +3,14 @@ const path = require('path');
 const entryIndices = fs.readdirSync('src');
 
 module.exports = {
+    mode: 'development',
     entry: {
-        'bookstore': './src/index'
+        bookstore: './src/index',
     },
     devtool: 'eval',
     output: {
         path: path.resolve(__dirname, 'build'),
-        publicPath: "/scripts/",
+        publicPath: '/scripts/',
         filename: '[name].js',
     },
     module: {
@@ -21,12 +22,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }
+                use: ['style-loader', 'css-loader'],
+            },
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-
+    },
+    performance: {
+        hints: false,
     },
 };
