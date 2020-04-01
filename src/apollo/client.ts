@@ -1,8 +1,8 @@
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { ApolloLink } from 'apollo-link';
+import { NativeLink } from './NativeLink';
 
 const onErrorLink = onError(({ graphQLErrors, networkError }) => {
     if (graphQLErrors) {
@@ -18,12 +18,9 @@ const onErrorLink = onError(({ graphQLErrors, networkError }) => {
     }
 });
 
-const httpLink = new HttpLink({
-    uri: 'https://48p1r2roz4.sse.codesandbox.io',
-    credentials: 'same-origin',
-});
+const nativeLink = new NativeLink();
 
 export const client = new ApolloClient({
-    link: ApolloLink.from([onErrorLink, httpLink]),
+    link: ApolloLink.from([onErrorLink, nativeLink]),
     cache: new InMemoryCache(),
 });
