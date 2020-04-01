@@ -19,7 +19,7 @@ yarn
 yarn start
 ```
 
-Open your browser to [http://localhost:3000](http://localhost:3000) and click on an example.
+Open your browser to [http://localhost:3003](http://localhost:3003) and click on an example.
 
 ## Running tests
 
