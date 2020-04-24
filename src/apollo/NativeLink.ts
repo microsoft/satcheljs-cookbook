@@ -1,4 +1,5 @@
 import { ApolloLink, Operation, Observable, FetchResult } from 'apollo-link';
+import { print } from 'graphql/language/printer';
 
 const fakeData = {
     data: {
@@ -24,6 +25,9 @@ export class NativeLink extends ApolloLink {
         const requestId = this.nextId++;
 
         console.log(`[NativeLink] Starting request (${requestId})`, operation);
+
+        const rawQuery = print(operation.query);
+        console.log(`[NativeLink] Raw query (${requestId})`, rawQuery);
 
         return new Observable<FetchResult>(observer => {
             setTimeout(() => {
