@@ -2,17 +2,17 @@ import * as React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-const EXCHANGE_RATES = gql`
-    {
-        rates(currency: "USD") {
+const MAX_RATE = gql`
+    query MaxRate {
+        maxRate @client {
             currency
             rate
         }
     }
 `;
 
-interface ExchangeRateResult {
-    rates: ExchangeRate[];
+interface MaxRateResult {
+    maxRate: ExchangeRate;
 }
 
 interface ExchangeRate {
@@ -21,20 +21,18 @@ interface ExchangeRate {
 }
 
 export function ExchangeRates() {
-    const { loading, error, data } = useQuery<ExchangeRateResult>(EXCHANGE_RATES);
+    const { loading, error, data } = useQuery<MaxRateResult>(MAX_RATE);
 
     if (loading) return <p>Loading...</p>;
     if (error || !data) return <p>Error :(</p>;
 
+    const { currency, rate } = (data as any).maxRate;
+
     return (
-        <div>
-            {data.rates.map(({ currency, rate }) => (
-                <div key={currency}>
-                    <p>
-                        {currency}: {rate}
-                    </p>
-                </div>
-            ))}
+        <div key={currency}>
+            <p>
+                {currency}: {rate}
+            </p>
         </div>
     );
 }
