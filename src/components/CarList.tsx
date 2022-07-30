@@ -6,14 +6,14 @@ import * as classnames from 'classnames/bind';
 
 const cx = classnames.bind(require('./AppStyles.css'));
 
-export default observer(function CategoryList() {
+export default observer(function CarList() {
     const store = getStore();
     const selectedCategoryId = getStore().selectedCategoryId;
     return (
         <div className={cx('category')}>
-            <h2>Categories</h2>
-            {Object.keys(store.categories).map(categoryId => {
-                const category = store.categories[categoryId];
+            <h2>Fucking Cars</h2>
+            {Object.keys(store.cars).map(categoryId => {
+                const car = store.cars[categoryId];
                 return (
                     <div
                         onClick={() => {
@@ -24,7 +24,7 @@ export default observer(function CategoryList() {
                             { selected: selectedCategoryId == categoryId },
                             'selectable'
                         )}>
-                        {category.name}
+                        {car.name}
                     </div>
                 );
             })}

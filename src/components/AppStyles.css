@@ -2,16 +2,31 @@ html, body {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     padding: 0;
     margin: 0;
+    color: teal;
+    background-color: black;
+
 }
 
 #app {
-     width: 80%;
+     width: 95%;
      margin: 2rem auto;
+     background-color: black;
+}
 
+.title {
+    background-color: black;
+    color: teal;
+    text-align: center;
+    padding: 24px;
+    font-size: 42px;
+    border-bottom: 2px solid teal;
+    font-style: bold;
 }
 
 .selected {
-    background: #eee;
+    background: rgb(2, 216, 216);
+    color: black;
+    border-radius: 5px;
 }
 
 .selectable {

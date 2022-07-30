@@ -5,6 +5,12 @@ export interface BookStore {
     categories: {
         [id: string]: Category;
     };
+    cars: {
+        [id: string]: Car;
+    };
+    tracks: {
+        [id: string]: Track;
+    };
     selectedBookId: string | null;
     selectedCategoryId: string;
     cart: Cart;
@@ -15,6 +21,15 @@ export interface Book {
     categoryId: string;
     description: string;
     price: number;
+}
+
+export interface Car {
+    name: string;
+    speedRating: number;
+}
+
+export interface Track {
+    name: string;
 }
 
 export interface Category {
@@ -71,6 +86,44 @@ export const sampleData: BookStore = {
         },
         '2': {
             name: 'Science Fiction',
+        },
+    },
+    cars: {
+        '1': {
+            name: 'Bulldog',
+            speedRating: 350,
+        },
+        '2': {
+            name: 'RoadSlayer GT',
+            speedRating: 317,
+        },
+        '3': {
+            name: 'RoadSlayer GT',
+            speedRating: 317,
+        },
+        '4': {
+            name: 'Speedbird',
+            speedRating: 357,
+        },
+        '5': {
+            name: 'Sunrise Super',
+            speedRating: 346,
+        },
+        '6': {
+            name: 'Super Venom',
+            speedRating: 364,
+        },
+        '7': {
+            name: 'Venom',
+            speedRating: 344,
+        },
+    },
+    tracks: {
+        '1': {
+            name: 'Fire Rock Raceway',
+        },
+        '2': {
+            name: 'Firwood Motocenter',
         },
     },
     selectedCategoryId: '1',
