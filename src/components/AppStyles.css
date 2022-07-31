@@ -40,11 +40,17 @@ html, body {
 }
 
 .category {
+    position: relative;
     margin: 0 2rem 0 0;
     width: 15rem;
 }
 
 .description {
     width: auto;
+}
+
+.cellButton {
+    position: absolute;
+    right: 8px;
 }
 

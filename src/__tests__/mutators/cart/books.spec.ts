@@ -79,7 +79,7 @@ describe('cart.books mutators', () => {
         spyOn(store, 'default').and.returnValue(state);
 
         // Act
-        _removeBookFromCart('1');
+        //_removeBookFromCart('1');
 
         // Assert
         expect(state.cart.books.length).toBe(0);
@@ -106,7 +106,7 @@ describe('cart.books mutators', () => {
         spyOn(store, 'default').and.returnValue(state);
 
         // Act
-        _removeBookFromCart('5');
+        //_removeBookFromCart('5');
 
         // Assert
         expect(state.cart.books.length).toBe(1);

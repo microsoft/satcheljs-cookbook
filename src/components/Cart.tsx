@@ -21,13 +21,13 @@ export default observer(function Cart() {
                         )}>
                         <strong onClick={() => selectBookInCart(item.bookId)}>{book.name}</strong>(
                         {item.quantity}) -
-                        <button
+                        {/* <button
                             onClick={e => {
-                                removeBookFromCart(item.bookId);
+                                //removeBookFromCart(item.bookId);
                                 e.preventDefault();
                             }}>
                             Remove
-                        </button>
+                        </button> */}
                     </div>
                 );
             })}

@@ -11,6 +11,7 @@ export interface BookStore {
     tracks: {
         [id: string]: Track;
     };
+    newCars: Car[];
     selectedBookId: string | null;
     selectedCategoryId: string;
     cart: Cart;
@@ -126,7 +127,17 @@ export const sampleData: BookStore = {
             name: 'Firwood Motocenter',
         },
     },
-    selectedCategoryId: '1',
+    newCars: [
+        {
+            name: 'Bulldog',
+            speedRating: 350,
+        },
+        {
+            name: 'Super Venom',
+            speedRating: 364,
+        },
+    ],
+    selectedCategoryId: 'Bulldog',
     selectedBookId: '1',
     cart: {
         books: [],
