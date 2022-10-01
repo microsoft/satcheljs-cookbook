@@ -19,7 +19,7 @@ describe('cart.books mutators', () => {
             },
         };
 
-        spyOn(store, 'default').and.returnValue(state);
+        jest.spyOn(store, 'default').mockReturnValue(state);
 
         // Act
         addBookToCart('1');
@@ -47,7 +47,7 @@ describe('cart.books mutators', () => {
             },
         };
 
-        spyOn(store, 'default').and.returnValue(state);
+        jest.spyOn(store, 'default').mockReturnValue(state);
 
         // Act
         addBookToCart('1');
@@ -76,7 +76,7 @@ describe('cart.books mutators', () => {
             },
         };
 
-        spyOn(store, 'default').and.returnValue(state);
+        jest.spyOn(store, 'default').mockReturnValue(state);
 
         // Act
         _removeBookFromCart('1');
@@ -103,7 +103,7 @@ describe('cart.books mutators', () => {
             },
         };
 
-        spyOn(store, 'default').and.returnValue(state);
+        jest.spyOn(store, 'default').mockReturnValue(state);
 
         // Act
         _removeBookFromCart('5');
@@ -130,7 +130,7 @@ describe('cart.books mutators', () => {
             },
         };
 
-        spyOn(store, 'default').and.returnValue(state);
+        jest.spyOn(store, 'default').mockReturnValue(state);
 
         // Act
         finishBuying();
